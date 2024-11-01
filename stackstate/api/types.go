@@ -81,8 +81,8 @@ type MetricQueryResponse struct {
 }
 
 type MetricData struct {
-	ResultType string       `json:"resultType"`
-	Result     MetricResult `json:"result"`
+	ResultType string         `json:"resultType"`
+	Result     []MetricResult `json:"result"`
 }
 
 func (m *MetricData) UnmarshalJSON(data []byte) error {
@@ -105,15 +105,16 @@ func (m *MetricData) UnmarshalJSON(data []byte) error {
 
 	resultList := dataMap["result"].([]any)
 	if m.ResultType == "scalar" || m.ResultType == "string" {
-		m.Result = MetricResult{
+		mr := MetricResult{
 			Labels: make(map[string]string),
 			Points: make([]MetricPoint, 0, 1),
 		}
-		m.Result.Points = append(m.Result.Points, MetricPoint{})
-		err := mapFromArray(&m.Result.Points[0], resultList)
+		mr.Points = append(mr.Points, MetricPoint{})
+		err := mapFromArray(&mr.Points[0], resultList)
 		if err != nil {
 			return err
 		}
+		m.Result = []MetricResult{mr}
 		return nil
 	}
 
@@ -121,34 +122,35 @@ func (m *MetricData) UnmarshalJSON(data []byte) error {
 	if m.ResultType == "matrix" {
 		valueKey = "values"
 	}
-
+	m.Result = make([]MetricResult, 0, len(resultList))
 	for _, item := range resultList {
 		resultMap := item.(map[string]any)
 		labels := resultMap["metric"].(map[string]any)
-		m.Result = MetricResult{
+		mr := MetricResult{
 			Labels: make(map[string]string, len(labels)),
 			Points: make([]MetricPoint, 0, len(resultMap[valueKey].([]any))),
 		}
 
 		for k, v := range labels {
-			m.Result.Labels[k] = v.(string)
+			mr.Labels[k] = v.(string)
 		}
 
 		if m.ResultType == "matrix" {
 			for x, point := range resultMap["values"].([]any) {
-				m.Result.Points = append(m.Result.Points, MetricPoint{})
-				err := mapFromArray(&m.Result.Points[x], point.([]any))
+				mr.Points = append(mr.Points, MetricPoint{})
+				err := mapFromArray(&mr.Points[x], point.([]any))
 				if err != nil {
 					return err
 				}
 			}
 		} else {
-			m.Result.Points = append(m.Result.Points, MetricPoint{})
-			err := mapFromArray(&m.Result.Points[0], resultMap["value"].([]any))
+			mr.Points = append(mr.Points, MetricPoint{})
+			err := mapFromArray(&mr.Points[0], resultMap["value"].([]any))
 			if err != nil {
 				return err
 			}
 		}
+		m.Result = append(m.Result, mr)
 	}
 
 	return nil
