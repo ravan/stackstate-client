@@ -9,7 +9,9 @@ import (
 	sts "github.com/ravan/stackstate-client/stackstate"
 	"log/slog"
 	"net/http"
+	"strconv"
 	"strings"
+	"time"
 )
 
 type Client struct {
@@ -25,7 +27,8 @@ var (
 )
 
 const (
-	GroovyScript string = "GroovyScript"
+	GroovyScript   string = "GroovyScript"
+	DefaultTimeout        = "10s"
 )
 
 func NewClient(conf *sts.StackState) *Client {
@@ -42,6 +45,45 @@ func (c *Client) Status() (*ServerInfo, error) {
 		return nil, err
 	}
 	return &s, nil
+}
+
+// QueryMetric is the instant query at a single point in time.
+// The endpoint evaluates an instant query at a single point in time.
+// Query is the promql query and Time the single point.
+// Timeout is in the form "<number><unit (y|w|d|h|m|s|ms)>". Example 10ms.
+func (c *Client) QueryMetric(query string, at time.Time, timeout string) (*MetricQueryResponse, error) {
+	var m MetricQueryResponse
+	err := c.apiRequests("metric/query").
+		Param("query", query).
+		Param("timeout", timeout).
+		Param("time", strconv.FormatInt(at.Unix(), 10)).
+		ToJSON(&m).
+		Fetch(context.Background())
+	if err != nil {
+		return nil, err
+	}
+	return &m, nil
+}
+
+// QueryRangeMetric is the query over a range of time
+// The endpoint evaluates an expression query over a range of time
+// Query is the promql query. Start and End times indicate the range.
+// Step is the promstep in the same format as Timeout.
+// Timeout is in the form "<number><unit (y|w|d|h|m|s|ms)>". Example 10ms.
+func (c *Client) QueryRangeMetric(query string, start time.Time, end time.Time, step, timeout string) (*MetricQueryResponse, error) {
+	var m MetricQueryResponse
+	err := c.apiRequests("metric/query_range").
+		Param("query", query).
+		Param("timeout", timeout).
+		Param("step", step).
+		Param("start", strconv.FormatInt(start.Unix(), 10)).
+		Param("end", strconv.FormatInt(end.Unix(), 10)).
+		ToJSON(&m).
+		Fetch(context.Background())
+	if err != nil {
+		return nil, err
+	}
+	return &m, nil
 }
 
 func (c *Client) ViewSnapshot(req *ViewSnapshotRequest) (*ViewSnapshotResponse, error) {

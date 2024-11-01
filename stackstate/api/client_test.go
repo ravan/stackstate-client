@@ -8,8 +8,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"log/slog"
+	"net/http"
+	"net/http/httptest"
 	"os"
 	"testing"
+	"time"
 )
 
 var opts = &slog.HandlerOptions{Level: slog.LevelDebug}
@@ -17,6 +20,70 @@ var handler = slog.NewJSONHandler(os.Stdout, opts)
 var logger = slog.New(handler)
 
 func init() { slog.SetDefault(logger) }
+
+func loadRespFile(w http.ResponseWriter, path string) {
+	path = fmt.Sprintf("../../testdata/%s", path)
+	_, err := os.Stat(path)
+	if err == nil {
+		file, err := os.ReadFile(path)
+		if err == nil {
+			_, err := w.Write(file)
+			if err == nil {
+				return
+			}
+		}
+	}
+	slog.Info("file not found", "path", path)
+	w.WriteHeader(http.StatusNotFound)
+}
+
+func getMockServer(conf *sts.StackState, hf http.HandlerFunc) *httptest.Server {
+	server := httptest.NewServer(hf)
+	conf.ApiUrl = server.URL
+	return server
+}
+
+func getClient(t *testing.T, hf http.HandlerFunc) (*Client, *httptest.Server) {
+	conf := getConfig(t)
+	server := getMockServer(conf, hf)
+	client := NewClient(conf)
+	return client, server
+}
+
+func TestQuery(t *testing.T) {
+	client, server := getClient(t, func(w http.ResponseWriter, r *http.Request) {
+		assert.Equal(t, "/api/metric/query", r.URL.Path)
+		assert.NotEmpty(t, r.URL.Query().Get("time"))
+		assert.NotEmpty(t, r.URL.Query().Get("query"))
+		assert.Equal(t, r.URL.Query().Get("timeout"), DefaultTimeout)
+		loadRespFile(w, "api/metric/query/response.json")
+	})
+	defer server.Close()
+	query := `round(sum by (cluster_name, namespace, pod_name)(container_cpu_usage / 1000000000) / sum by (cluster_name, namespace, pod_name) (kubernetes_cpu_requests), 0.001)`
+	now := time.Now()
+	response, err := client.QueryMetric(query, now, DefaultTimeout)
+	require.NoError(t, err)
+	assert.Equal(t, "success", response.Status)
+}
+
+func TestQueryRange(t *testing.T) {
+	client, server := getClient(t, func(w http.ResponseWriter, r *http.Request) {
+		assert.Equal(t, "/api/metric/query_range", r.URL.Path)
+		assert.NotEmpty(t, r.URL.Query().Get("start"))
+		assert.NotEmpty(t, r.URL.Query().Get("end"))
+		assert.NotEmpty(t, r.URL.Query().Get("query"))
+		assert.NotEmpty(t, r.URL.Query().Get("step"))
+		assert.Equal(t, r.URL.Query().Get("timeout"), DefaultTimeout)
+		loadRespFile(w, "api/metric/query_range/response.json")
+	})
+	defer server.Close()
+	query := `sum by (cluster_name) (max_over_time(kubernetes_state_node_count{cluster_name="susecon-frb-cluster-0"}[${__interval}]))`
+	now := time.Now()
+	begin := now.Add(-5 * time.Minute)
+	response, err := client.QueryRangeMetric(query, begin, now, "1m", DefaultTimeout)
+	require.NoError(t, err)
+	assert.Equal(t, "success", response.Status)
+}
 
 func TestClientConnection(t *testing.T) {
 	conf := getConfig(t)
@@ -55,7 +122,7 @@ func toJson(a any) string {
 }
 
 func getConfig(t *testing.T) *sts.StackState {
-	require.NoError(t, godotenv.Load())
+	require.NoError(t, godotenv.Load("../../.env"))
 	return &sts.StackState{
 		ApiUrl:   os.Getenv("STS_URL"),
 		ApiKey:   os.Getenv("STS_API_KEY"),

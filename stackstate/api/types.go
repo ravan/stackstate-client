@@ -2,6 +2,8 @@ package api
 
 import (
 	"encoding/json"
+	"strconv"
+	"strings"
 	"time"
 )
 
@@ -70,6 +72,96 @@ func (t *Label) UnmarshalJSON(data []byte) error {
 
 	*t = Label(label["name"])
 	return nil
+}
+
+type MetricQueryResponse struct {
+	Status string      `json:"status"`
+	Errors []*ErrorMsg `json:"errors"`
+	Data   MetricData  `json:"data"`
+}
+
+type MetricData struct {
+	ResultType string       `json:"resultType"`
+	Result     MetricResult `json:"result"`
+}
+
+func (m *MetricData) UnmarshalJSON(data []byte) error {
+	mapFromArray := func(m *MetricPoint, data []any) error {
+		// Assign array values to the struct fields
+		var err error
+		m.Timestamp = int64(data[0].(float64))
+		m.Value, err = strconv.ParseFloat(strings.TrimSpace(data[1].(string)), 64)
+		if err != nil {
+			return err
+		}
+		return nil
+	}
+
+	var dataMap map[string]any
+	if err := json.Unmarshal(data, &dataMap); err != nil {
+		return err
+	}
+	m.ResultType = dataMap["resultType"].(string)
+
+	resultList := dataMap["result"].([]any)
+	if m.ResultType == "scalar" || m.ResultType == "string" {
+		m.Result = MetricResult{
+			Labels: make(map[string]string),
+			Points: make([]MetricPoint, 0, 1),
+		}
+		m.Result.Points = append(m.Result.Points, MetricPoint{})
+		err := mapFromArray(&m.Result.Points[0], resultList)
+		if err != nil {
+			return err
+		}
+		return nil
+	}
+
+	valueKey := "value"
+	if m.ResultType == "matrix" {
+		valueKey = "values"
+	}
+
+	for _, item := range resultList {
+		resultMap := item.(map[string]any)
+		labels := resultMap["metric"].(map[string]any)
+		m.Result = MetricResult{
+			Labels: make(map[string]string, len(labels)),
+			Points: make([]MetricPoint, 0, len(resultMap[valueKey].([]any))),
+		}
+
+		for k, v := range labels {
+			m.Result.Labels[k] = v.(string)
+		}
+
+		if m.ResultType == "matrix" {
+			for x, point := range resultMap["values"].([]any) {
+				m.Result.Points = append(m.Result.Points, MetricPoint{})
+				err := mapFromArray(&m.Result.Points[x], point.([]any))
+				if err != nil {
+					return err
+				}
+			}
+		} else {
+			m.Result.Points = append(m.Result.Points, MetricPoint{})
+			err := mapFromArray(&m.Result.Points[0], resultMap["value"].([]any))
+			if err != nil {
+				return err
+			}
+		}
+	}
+
+	return nil
+}
+
+type MetricResult struct {
+	Labels map[string]string `json:"metric"`
+	Points []MetricPoint     `json:"values"`
+}
+
+type MetricPoint struct {
+	Timestamp int64   `json:"timestamp"`
+	Value     float64 `json:"value"`
 }
 
 type TopoQueryResponse struct {

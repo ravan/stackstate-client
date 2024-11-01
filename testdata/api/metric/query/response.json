@@ -1,0 +1,1790 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "vector",
+    "result": [
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "ingress-nginx-external",
+          "pod_name": "ingress-nginx-external-controller-5b8bb5f759-6dqmh"
+        },
+        "value": [
+          1730470751,
+          "0.029"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "ingress-nginx-external",
+          "pod_name": "ingress-nginx-external-controller-5b8bb5f759-tpxqs"
+        },
+        "value": [
+          1730470751,
+          "0.028"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "jspolicy",
+          "pod_name": "jspolicy-6dc98756f8-rv7nj"
+        },
+        "value": [
+          1730470751,
+          "0.05"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "jspolicy",
+          "pod_name": "jspolicy-6dc98756f8-zpmj8"
+        },
+        "value": [
+          1730470751,
+          "0.066"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-downscaler",
+          "pod_name": "kube-downscaler-5888bd7786-vrvqp"
+        },
+        "value": [
+          1730470751,
+          "0.112"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "calico-node-5grc5"
+        },
+        "value": [
+          1730470751,
+          "0.258"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "calico-node-fpspq"
+        },
+        "value": [
+          1730470751,
+          "0.231"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "calico-node-h9ldc"
+        },
+        "value": [
+          1730470751,
+          "0.299"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "calico-node-qgmc2"
+        },
+        "value": [
+          1730470751,
+          "0.228"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "calico-typha-55998bc676-7z2hq"
+        },
+        "value": [
+          1730470751,
+          "0.005"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "calico-typha-55998bc676-l7rcd"
+        },
+        "value": [
+          1730470751,
+          "0.007"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "calico-typha-horizontal-autoscaler-644cd989fc-fhzmv"
+        },
+        "value": [
+          1730470751,
+          "0.018"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "event-exporter-gke-7f7c987b9-96tjt"
+        },
+        "value": [
+          1730470751,
+          "0.04"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "external-dns-6448f94544-5crht"
+        },
+        "value": [
+          1730470751,
+          "0.021"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "fluentbit-gke-9fxxs"
+        },
+        "value": [
+          1730470751,
+          "0.05"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "fluentbit-gke-rgctx"
+        },
+        "value": [
+          1730470751,
+          "0.036"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "fluentbit-gke-vnnbq"
+        },
+        "value": [
+          1730470751,
+          "0.03"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "fluentbit-gke-z9zmk"
+        },
+        "value": [
+          1730470751,
+          "0.045"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "gke-metadata-server-c85pt"
+        },
+        "value": [
+          1730470751,
+          "0.004"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "gke-metadata-server-g6gjq"
+        },
+        "value": [
+          1730470751,
+          "0.011"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "gke-metadata-server-jjmvg"
+        },
+        "value": [
+          1730470751,
+          "0.005"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "gke-metadata-server-r88xc"
+        },
+        "value": [
+          1730470751,
+          "0.006"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "gke-metrics-agent-hdrmf"
+        },
+        "value": [
+          1730470751,
+          "0.239"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "gke-metrics-agent-l5sxd"
+        },
+        "value": [
+          1730470751,
+          "0.354"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "gke-metrics-agent-mz9hw"
+        },
+        "value": [
+          1730470751,
+          "0.253"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "gke-metrics-agent-vtq5p"
+        },
+        "value": [
+          1730470751,
+          "0.394"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "ip-masq-agent-2wsxv"
+        },
+        "value": [
+          1730470751,
+          "0.003"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "ip-masq-agent-58b9z"
+        },
+        "value": [
+          1730470751,
+          "0.002"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "ip-masq-agent-676r9"
+        },
+        "value": [
+          1730470751,
+          "0.026"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "ip-masq-agent-7ldsh"
+        },
+        "value": [
+          1730470751,
+          "0.024"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "konnectivity-agent-866576d5d4-2st89"
+        },
+        "value": [
+          1730470751,
+          "0.114"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "konnectivity-agent-866576d5d4-4g9ht"
+        },
+        "value": [
+          1730470751,
+          "0.079"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "konnectivity-agent-866576d5d4-jn4lw"
+        },
+        "value": [
+          1730470751,
+          "0.074"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "konnectivity-agent-866576d5d4-xhg22"
+        },
+        "value": [
+          1730470751,
+          "0.056"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "konnectivity-agent-autoscaler-67b5685d76-rnjhg"
+        },
+        "value": [
+          1730470751,
+          "0.014"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "kube-dns-54c99c9857-47qpv"
+        },
+        "value": [
+          1730470751,
+          "0.014"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "kube-dns-54c99c9857-t97fn"
+        },
+        "value": [
+          1730470751,
+          "0.014"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "kube-dns-autoscaler-7d866fc-9mvxw"
+        },
+        "value": [
+          1730470751,
+          "0.008"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-gke-gke-demo-public-default-node-pool-228fb185-2kg3"
+        },
+        "value": [
+          1730470751,
+          "0.005"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-gke-gke-demo-public-default-node-pool-228fb185-f3o3"
+        },
+        "value": [
+          1730470751,
+          "0.005"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-gke-gke-demo-public-default-node-pool-228fb185-gefy"
+        },
+        "value": [
+          1730470751,
+          "0.006"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-gke-gke-demo-public-default-node-pool-228fb185-hyad"
+        },
+        "value": [
+          1730470751,
+          "0.008"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "l7-default-backend-57447bd9c5-b6k7j"
+        },
+        "value": [
+          1730470751,
+          "0.005"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "metrics-server-v0.7.0-5c4c5d6b57-n66zq"
+        },
+        "value": [
+          1730470751,
+          "0.312"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "netd-cpwq5"
+        },
+        "value": [
+          1730470751,
+          "0.072"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "netd-fmwfs"
+        },
+        "value": [
+          1730470751,
+          "0.083"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "netd-mkhpz"
+        },
+        "value": [
+          1730470751,
+          "0.032"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "netd-wznfz"
+        },
+        "value": [
+          1730470751,
+          "0.09"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "node-local-dns-2gnxh"
+        },
+        "value": [
+          1730470751,
+          "0.229"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "node-local-dns-5zn6d"
+        },
+        "value": [
+          1730470751,
+          "0.57"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "node-local-dns-r5xsw"
+        },
+        "value": [
+          1730470751,
+          "0.266"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "node-local-dns-rm7kc"
+        },
+        "value": [
+          1730470751,
+          "0.201"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "pdcsi-node-d4npx"
+        },
+        "value": [
+          1730470751,
+          "0.324"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "pdcsi-node-m4scx"
+        },
+        "value": [
+          1730470751,
+          "0.29"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "pdcsi-node-tvx4w"
+        },
+        "value": [
+          1730470751,
+          "0.303"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "kube-system",
+          "pod_name": "pdcsi-node-z9krp"
+        },
+        "value": [
+          1730470751,
+          "0.292"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-checks-agent-6f7b7f4dbc-hs52z"
+        },
+        "value": [
+          1730470751,
+          "0.081"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-cluster-agent-66b7f8bb7-tpgvm"
+        },
+        "value": [
+          1730470751,
+          "1.186"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-logs-agent-45x2p"
+        },
+        "value": [
+          1730470751,
+          "1.255"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-logs-agent-jh5qr"
+        },
+        "value": [
+          1730470751,
+          "1.062"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-logs-agent-jmxcx"
+        },
+        "value": [
+          1730470751,
+          "1.202"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-logs-agent-ztg8b"
+        },
+        "value": [
+          1730470751,
+          "1.134"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-node-agent-d7z98"
+        },
+        "value": [
+          1730470751,
+          "0.843"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-node-agent-lc566"
+        },
+        "value": [
+          1730470751,
+          "0.448"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-node-agent-rcpdj"
+        },
+        "value": [
+          1730470751,
+          "0.473"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "monitoring",
+          "pod_name": "suse-observability-prod-agent-node-agent-v5bw6"
+        },
+        "value": [
+          1730470751,
+          "0.524"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-accountingservice-68f44b9c4b-j6l6n"
+        },
+        "value": [
+          1730470751,
+          "0.042"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-adservice-7d8cf47c84-bl8xh"
+        },
+        "value": [
+          1730470751,
+          "0.021"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-cartservice-54f6c48969-cchft"
+        },
+        "value": [
+          1730470751,
+          "0.176"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-checkoutservice-6bc5b569b7-66t9z"
+        },
+        "value": [
+          1730470751,
+          "0.024"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-currencyservice-67c54d7dfc-2q4sl"
+        },
+        "value": [
+          1730470751,
+          "0.124"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-emailservice-84db8fb7f9-qdrbz"
+        },
+        "value": [
+          1730470751,
+          "0.006"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-featureflagservice-7bd44fbf4c-txv9q"
+        },
+        "value": [
+          1730470751,
+          "0.301"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-ffspostgres-8b76b4b7b-c5hsg"
+        },
+        "value": [
+          1730470751,
+          "0.03"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-frauddetectionservice-58658757c9-jssgz"
+        },
+        "value": [
+          1730470751,
+          "0.066"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-frontend-5fd4d977bf-hrdtg"
+        },
+        "value": [
+          1730470751,
+          "1.571"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-frontendproxy-5dcddb78bd-zxlz2"
+        },
+        "value": [
+          1730470751,
+          "1.53"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-kafka-5885b7cff4-jlfsk"
+        },
+        "value": [
+          1730470751,
+          "0.188"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-paymentservice-69bf4fb8bb-zgdrm"
+        },
+        "value": [
+          1730470751,
+          "0.003"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-productcatalogservice-694b65785f-cxgrc"
+        },
+        "value": [
+          1730470751,
+          "0.173"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-quoteservice-79bbcbdc75-kbhdx"
+        },
+        "value": [
+          1730470751,
+          "0.003"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-recommendationservice-79d8464848-7c7dn"
+        },
+        "value": [
+          1730470751,
+          "0.266"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-redis-99cfd6995-tdpxx"
+        },
+        "value": [
+          1730470751,
+          "0.039"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "otel-demo",
+          "pod_name": "od-shippingservice-5db649dc9f-xftt8"
+        },
+        "value": [
+          1730470751,
+          "0.002"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "carts-549c9667f4-5cdpj"
+        },
+        "value": [
+          1730470751,
+          "0.008"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "carts-db-656998956b-65jl6"
+        },
+        "value": [
+          1730470751,
+          "0.883"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "catalogue-66775b4c87-wgwst"
+        },
+        "value": [
+          1730470751,
+          "0.278"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "catalogue-db-766898db9-7nvf2"
+        },
+        "value": [
+          1730470751,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "front-end-9684b955c-krczv"
+        },
+        "value": [
+          1730470751,
+          "0.058"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "ingress-c67b4cdc5-gktvv"
+        },
+        "value": [
+          1730470751,
+          "0.026"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "loadgen-57db6f5fd6-cdlms"
+        },
+        "value": [
+          1730470751,
+          "0.017"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "orders-5898984c5c-2h8qx"
+        },
+        "value": [
+          1730470751,
+          "0.006"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "orders-db-676c554cfb-h9ngj"
+        },
+        "value": [
+          1730470751,
+          "0.044"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "payment-7df996f879-t6z6m"
+        },
+        "value": [
+          1730470751,
+          "0.004"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "queue-master-6cc879bc97-2rp2s"
+        },
+        "value": [
+          1730470751,
+          "0.005"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "rabbitmq-5579f96878-dtght"
+        },
+        "value": [
+          1730470751,
+          "0.036"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "shipping-85788db9dc-krsj9"
+        },
+        "value": [
+          1730470751,
+          "0.005"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "sock-shop",
+          "pod_name": "user-db-6bb8f56886-8qpl2"
+        },
+        "value": [
+          1730470751,
+          "0.044"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "tooling",
+          "pod_name": "cluster-ingress-check-nginx-549679844-kgkps"
+        },
+        "value": [
+          1730470751,
+          "0.003"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "tooling",
+          "pod_name": "kommoner-operator-7849d585cb-84nhv"
+        },
+        "value": [
+          1730470751,
+          "0.011"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "trafficmirror",
+          "pod_name": "trafficmirror-otel-trafficmirror-76684947b7-tfr6z"
+        },
+        "value": [
+          1730470751,
+          "0.159"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "gke-demo-public.gcp.stackstate.io",
+          "namespace": "trafficmirror",
+          "pod_name": "trafficmirror-trafficmirror-6bc859cdb-xjx2k"
+        },
+        "value": [
+          1730470751,
+          "0.667"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-rancher-rke2-cluster-0-worker-0"
+        },
+        "value": [
+          1730470751,
+          "0.002"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-rancher-rke2-cluster-0-worker-1"
+        },
+        "value": [
+          1730470751,
+          "0.002"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "kube-system",
+          "pod_name": "rke2-coredns-rke2-coredns-67f86d96c-xrw46"
+        },
+        "value": [
+          1730470751,
+          "0.083"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "kube-system",
+          "pod_name": "rke2-ingress-nginx-controller-ch7px"
+        },
+        "value": [
+          1730470751,
+          "0.013"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "kube-system",
+          "pod_name": "rke2-ingress-nginx-controller-v7pcx"
+        },
+        "value": [
+          1730470751,
+          "0.015"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "carts-c8cf9d485-wbmws"
+        },
+        "value": [
+          1730470751,
+          "0.048"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "carts-db-5cf469987c-s72n6"
+        },
+        "value": [
+          1730470751,
+          "0.289"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "catalogue-6674f6bb4f-rxrgd"
+        },
+        "value": [
+          1730470751,
+          "0.623"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "catalogue-db-57f67fd8f9-g6qjb"
+        },
+        "value": [
+          1730470751,
+          "1.958"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "front-end-66556995bd-wqnjn"
+        },
+        "value": [
+          1730470751,
+          "0.258"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "ingress-757db7ff56-xt964"
+        },
+        "value": [
+          1730470751,
+          "0.085"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "loadgen-65c99d7f67-s4dc4"
+        },
+        "value": [
+          1730470751,
+          "0.18"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "orders-694f6579c7-8k8c6"
+        },
+        "value": [
+          1730470751,
+          "0.017"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "orders-db-85c557f9cf-7hvt8"
+        },
+        "value": [
+          1730470751,
+          "0.052"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "sock-shop",
+          "pod_name": "user-db-76cbfcf55-h8tsr"
+        },
+        "value": [
+          1730470751,
+          "0.105"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-checks-agent-76746644b7-c72tk"
+        },
+        "value": [
+          1730470751,
+          "0.082"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-cluster-agent-7476d8cb59-6jmtm"
+        },
+        "value": [
+          1730470751,
+          "0.093"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-logs-agent-hr8nw"
+        },
+        "value": [
+          1730470751,
+          "1.083"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-logs-agent-nz255"
+        },
+        "value": [
+          1730470751,
+          "2.134"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-node-agent-fk4tr"
+        },
+        "value": [
+          1730470751,
+          "1.097"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-0",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-node-agent-rvm9n"
+        },
+        "value": [
+          1730470751,
+          "2.833"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-rancher-rke2-cluster-1-worker-0"
+        },
+        "value": [
+          1730470751,
+          "0.003"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-rancher-rke2-cluster-1-worker-1"
+        },
+        "value": [
+          1730470751,
+          "0.003"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "kube-system",
+          "pod_name": "rke2-coredns-rke2-coredns-67f86d96c-jslz9"
+        },
+        "value": [
+          1730470751,
+          "0.033"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "kube-system",
+          "pod_name": "rke2-ingress-nginx-controller-4xxv4"
+        },
+        "value": [
+          1730470751,
+          "0.014"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "kube-system",
+          "pod_name": "rke2-ingress-nginx-controller-ptq8t"
+        },
+        "value": [
+          1730470751,
+          "0.032"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "sock-shop",
+          "pod_name": "payment-65db57b9f8-x95lt"
+        },
+        "value": [
+          1730470751,
+          "0.039"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "sock-shop",
+          "pod_name": "queue-master-6c494b9fc4-6trmz"
+        },
+        "value": [
+          1730470751,
+          "0.014"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "sock-shop",
+          "pod_name": "rabbitmq-6c8d5c6fc-8ctn5"
+        },
+        "value": [
+          1730470751,
+          "0.071"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "sock-shop",
+          "pod_name": "shipping-849d9568cd-tpbzs"
+        },
+        "value": [
+          1730470751,
+          "0.013"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-checks-agent-5dbd5fcbbb-nwvlb"
+        },
+        "value": [
+          1730470751,
+          "0.085"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-cluster-agent-756c498b89-2lptf"
+        },
+        "value": [
+          1730470751,
+          "0.771"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-logs-agent-45rt8"
+        },
+        "value": [
+          1730470751,
+          "0.844"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-logs-agent-lmxfr"
+        },
+        "value": [
+          1730470751,
+          "1.075"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-node-agent-9rb7s"
+        },
+        "value": [
+          1730470751,
+          "1.628"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rancher-rke2-cluster-1",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-node-agent-tmxgt"
+        },
+        "value": [
+          1730470751,
+          "1.548"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "cluedo-2024",
+          "pod_name": "c-colonel-mustard-and-the-sluggish-server-8569cd7c97-6jwl8"
+        },
+        "value": [
+          1730470751,
+          "0.014"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "cluedo-2024",
+          "pod_name": "c-conservatory-load-test-8c7b7cdbb-84mfn"
+        },
+        "value": [
+          1730470751,
+          "0.047"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "cluedo-2024",
+          "pod_name": "c-mr-greens-survival-in-the-conservatory-57955474fd-zm7ll"
+        },
+        "value": [
+          1730470751,
+          "0.994"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "cluedo-2024",
+          "pod_name": "c-professor-plums-transparent-secrets-bd9c8b668-b8qmd"
+        },
+        "value": [
+          1730470751,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "cluedo-2024",
+          "pod_name": "c-sluggish-server-load-test-667f8f8bb6-sv2t7"
+        },
+        "value": [
+          1730470751,
+          "0.018"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "cluedo-2024",
+          "pod_name": "c-the-intruder-and-inspector-gray-0"
+        },
+        "value": [
+          1730470751,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "flux-system",
+          "pod_name": "flux-856bdf4666-glp4b"
+        },
+        "value": [
+          1730470751,
+          "0.103"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-rke2-challenges-cluster-worker-0"
+        },
+        "value": [
+          1730470751,
+          "0.004"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kube-system",
+          "pod_name": "kube-proxy-rke2-challenges-cluster-worker-1"
+        },
+        "value": [
+          1730470751,
+          "0.003"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kube-system",
+          "pod_name": "rke2-coredns-rke2-coredns-67f86d96c-qp7sm"
+        },
+        "value": [
+          1730470751,
+          "0.05"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kube-system",
+          "pod_name": "rke2-ingress-nginx-controller-4j9d6"
+        },
+        "value": [
+          1730470751,
+          "0.015"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kube-system",
+          "pod_name": "rke2-ingress-nginx-controller-bc4s7"
+        },
+        "value": [
+          1730470751,
+          "0.02"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kubecon-2024",
+          "pod_name": "c-arc-de-triomphe-resource-rally-754c75b9d6-tpq4l"
+        },
+        "value": [
+          1730470751,
+          "0.988"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kubecon-2024",
+          "pod_name": "c-moulin-rouge-exposed-599898488b-l8sqs"
+        },
+        "value": [
+          1730470751,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kubecon-2024",
+          "pod_name": "c-panorama-load-test-7588c889f9-xgjm5"
+        },
+        "value": [
+          1730470751,
+          "0.088"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kubecon-2024",
+          "pod_name": "c-phantom-of-the-opera-0"
+        },
+        "value": [
+          1730470751,
+          "0"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kubecon-2024",
+          "pod_name": "c-rally-load-test-56d84bcf8-hqw7g"
+        },
+        "value": [
+          1730470751,
+          "0.051"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "kubecon-2024",
+          "pod_name": "c-sacre-coeur-panorama-8666fb5c68-cqhff"
+        },
+        "value": [
+          1730470751,
+          "0.05"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-checks-agent-bf4c4bf87-25hrn"
+        },
+        "value": [
+          1730470751,
+          "0.072"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-cluster-agent-79784c44b4-bk7f8"
+        },
+        "value": [
+          1730470751,
+          "1.465"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-logs-agent-nvfqk"
+        },
+        "value": [
+          1730470751,
+          "1.444"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-logs-agent-rlm5b"
+        },
+        "value": [
+          1730470751,
+          "1.392"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-node-agent-lqdrc"
+        },
+        "value": [
+          1730470751,
+          "1.197"
+        ]
+      },
+      {
+        "metric": {
+          "cluster_name": "rke2-challenges-cluster",
+          "namespace": "stackstate",
+          "pod_name": "stackstate-k8s-agent-node-agent-slczd"
+        },
+        "value": [
+          1730470751,
+          "1.599"
+        ]
+      }
+    ]
+  }
+}

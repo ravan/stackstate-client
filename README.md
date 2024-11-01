@@ -13,18 +13,31 @@ go get github.com/ravan/stackstate-client
 
 ## Usage
 
+### Access Rest API Endpoints
 ```go 
 
+import (
+	sts "github.com/ravan/stackstate-client/stackstate"
+	"github.com/ravan/stackstate-client/stackstate/api"
+	"github.com/ravan/stackstate-client/stackstate/receiver"
+)
 conf := &sts.StackState{
     ApiUrl:   os.Getenv("STS_URL"),
     ApiKey:   os.Getenv("STS_API_KEY"),
     ApiToken: os.Getenv("STS_TOKEN"),
 }
 
-client := NewClient(conf)
+// To access the API rest endpoints
+client := api.NewClient(conf)
 status, err := client.Status()
 
+
+
 ```
+
+### Access Receiver API Endpoints
+
+See [StackState k8s extension](https://github.com/ravan/stackstate-k8s-ext/blob/main/cmd/sync/main.go) integration for examples on using the receiver api.
 
 ## Authorization
 
