@@ -1,0 +1,946 @@
+{
+  "traceId": "7858ba1d08d71b652da4945866d02c1e",
+  "spans": [
+    {
+      "startTime": {
+        "timestamp": 1730451052208,
+        "offsetNanos": 477000
+      },
+      "endTime": {
+        "timestamp": 1730451052222,
+        "offsetNanos": 538000
+      },
+      "durationNanos": 14061000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "a01a4548dfa3a22c",
+      "parentSpanId": "bf7b9d16b0c3ca4b",
+      "spanName": "chuck_docs",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.completion": "",
+        "ravmeta": "this is data"
+      },
+      "statusCode": "Unset",
+      "scopeName": "openlit",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451052182,
+        "offsetNanos": 632000
+      },
+      "endTime": {
+        "timestamp": 1730451064854,
+        "offsetNanos": 340000
+      },
+      "durationNanos": 12671708000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "bf7b9d16b0c3ca4b",
+      "parentSpanId": "602147bcaaaf3d7b",
+      "spanName": "chuck_docs",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.completion": ""
+      },
+      "statusCode": "Unset",
+      "scopeName": "openlit",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451053464,
+        "offsetNanos": 998000
+      },
+      "endTime": {
+        "timestamp": 1730451063994,
+        "offsetNanos": 196000
+      },
+      "durationNanos": 10529198000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "a28afd5302862ab5",
+      "parentSpanId": "bf7b9d16b0c3ca4b",
+      "spanName": "emded_documents",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.completion": ""
+      },
+      "statusCode": "Unset",
+      "scopeName": "openlit",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451065399,
+        "offsetNanos": 625000
+      },
+      "endTime": {
+        "timestamp": 1730451065553,
+        "offsetNanos": 132000
+      },
+      "durationNanos": 153507000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "1da6b1fa22875746",
+      "parentSpanId": "2f86a4e7c2ad8a38",
+      "spanName": "emded_documents",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.completion": ""
+      },
+      "statusCode": "Unset",
+      "scopeName": "openlit",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451052208,
+        "offsetNanos": 797000
+      },
+      "endTime": {
+        "timestamp": 1730451052218,
+        "offsetNanos": 443000
+      },
+      "durationNanos": 9646000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "3be8edaf8c4a1dbf",
+      "parentSpanId": "f229c5fa47104112",
+      "spanName": "langchain.retrieve.create_documents",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.create_documents",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/09-18-2024nycmeetup-vectordatabases102-240917124641-19bae3b0.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451047326,
+        "offsetNanos": 882000
+      },
+      "endTime": {
+        "timestamp": 1730451047893,
+        "offsetNanos": 867000
+      },
+      "durationNanos": 566985000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "bdbca51b482847db",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/09-18-2024nycmeetup-vectordatabases102-240917124641-19bae3b0.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451047898,
+        "offsetNanos": 106000
+      },
+      "endTime": {
+        "timestamp": 1730451048765,
+        "offsetNanos": 184000
+      },
+      "durationNanos": 867078000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "164c3751093ef564",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/01-oct-2024pes-vectordatabasesandai-241001142959-0510fbe6.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451048767,
+        "offsetNanos": 530000
+      },
+      "endTime": {
+        "timestamp": 1730451048965,
+        "offsetNanos": 746000
+      },
+      "durationNanos": 198216000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "cb9d566117be86e8",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/06-04-2024-nyctechweek-localragwithllama3andmilvus-240605113619-6e91032b.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451048968,
+        "offsetNanos": 133000
+      },
+      "endTime": {
+        "timestamp": 1730451049313,
+        "offsetNanos": 861000
+      },
+      "durationNanos": 345728000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "617b6efcbab295f6",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/08-13-2024nycmeetup-unstructureddataprocessingfromcloudtoedge-240812185343-3ae3ff2b.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451049316,
+        "offsetNanos": 96000
+      },
+      "endTime": {
+        "timestamp": 1730451049514,
+        "offsetNanos": 792000
+      },
+      "durationNanos": 198696000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "eae15791f044e96c",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/06-04-2024-nyctechweek-discussiononvectordatabasesunstructureddataandai-240605125759-d80c571c.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451049516,
+        "offsetNanos": 953000
+      },
+      "endTime": {
+        "timestamp": 1730451049995,
+        "offsetNanos": 91000
+      },
+      "durationNanos": 478138000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "79a71695add0c4db",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/06-18-2024-princetonmeetup-introductiontomilvus-240619130633-2ad701db.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451049997,
+        "offsetNanos": 222000
+      },
+      "endTime": {
+        "timestamp": 1730451050333,
+        "offsetNanos": 279000
+      },
+      "durationNanos": 336057000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "78e194a71953350f",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/09-12-2024milvussensordatarag-240907202906-ea0e6890.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451050335,
+        "offsetNanos": 432000
+      },
+      "endTime": {
+        "timestamp": 1730451050811,
+        "offsetNanos": 813000
+      },
+      "durationNanos": 476381000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "112e535763b4a316",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/09-25-2024njxventuresummitintroduction-240926012816-5fbfcc78.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451050814,
+        "offsetNanos": 122000
+      },
+      "endTime": {
+        "timestamp": 1730451051458,
+        "offsetNanos": 110000
+      },
+      "durationNanos": 643988000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "24757cc7fc70dba7",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/06-20-2024-aicampmeetup-unstructureddataandvectordatabases-240620160248-1964efbc.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451051460,
+        "offsetNanos": 460000
+      },
+      "endTime": {
+        "timestamp": 1730451052178,
+        "offsetNanos": 714000
+      },
+      "durationNanos": 718254000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "ca0750d71c49cf7a",
+      "parentSpanId": "693c278141800fd2",
+      "spanName": "langchain.retrieve.load",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.load",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/09-19-2024aicamphybridseach-240919215006-76282317.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451064881,
+        "offsetNanos": 939000
+      },
+      "endTime": {
+        "timestamp": 1730451065332,
+        "offsetNanos": 892000
+      },
+      "durationNanos": 450953000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "4e512ff0e0365e98",
+      "parentSpanId": "2f86a4e7c2ad8a38",
+      "spanName": "langchain.retrieve.prompt",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.hub.owner": "rlm",
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.prompt",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.hub.repo": "rag-prompt",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451052208,
+        "offsetNanos": 533000
+      },
+      "endTime": {
+        "timestamp": 1730451052220,
+        "offsetNanos": 907000
+      },
+      "durationNanos": 12374000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "f229c5fa47104112",
+      "parentSpanId": "a01a4548dfa3a22c",
+      "spanName": "langchain.retrieve.split_documents",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "langchain.retrieve.split_documents",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "langchain",
+        "gen_ai.operation.name": "framework",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.retrieval.source": "talks/09-18-2024nycmeetup-vectordatabases102-240917124641-19bae3b0.pdf"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451047284,
+        "offsetNanos": 750000
+      },
+      "endTime": {
+        "timestamp": 1730451052180,
+        "offsetNanos": 847000
+      },
+      "durationNanos": 4896097000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "693c278141800fd2",
+      "parentSpanId": "602147bcaaaf3d7b",
+      "spanName": "load_pdfs_into_docs",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "function.args": "()",
+        "function.kwargs": "{}",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.environment": "default"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451065564,
+        "offsetNanos": 827000
+      },
+      "endTime": {
+        "timestamp": 1730451067890,
+        "offsetNanos": 729000
+      },
+      "durationNanos": 2325902000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "11835e01d5e20ab5",
+      "parentSpanId": "2f86a4e7c2ad8a38",
+      "spanName": "ollama.generate",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "gen_ai.request.model": "llama3.2",
+        "gen_ai.usage.output_tokens": "64",
+        "gen_ai.usage.cost": "0",
+        "gen_ai.environment": "default",
+        "gen_ai.endpoint": "ollama.generate",
+        "telemetry.sdk.name": "openlit",
+        "gen_ai.system": "ollama",
+        "gen_ai.request.is_stream": "true",
+        "gen_ai.usage.total_tokens": "620",
+        "gen_ai.operation.name": "chat",
+        "gen_ai.usage.input_tokens": "556",
+        "gen_ai.application_name": "Rag101"
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit.otel.tracing",
+      "events": [
+        {
+          "timestamp": {
+            "timestamp": 1730451067890,
+            "offsetNanos": 572000
+          },
+          "name": "gen_ai.content.prompt",
+          "attributes": {
+            "gen_ai.prompt": "Human: You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question. If you don't know the answer, just say that you don't know. Use three sentences maximum and keep the answer concise.\nQuestion: What indexes are available in Milvus? \nContext: 5. Inverted Index and Fuzzy Matching: These capabilities improve keyword retrieval for scalar ﬁelds\n6. Float16 and BF16 Vector Data Type Support: Milvus now supports these half-precision data types for vector ﬁelds, \nwhich can improve query eﬃciency and reduce memory usage.\n7. L0 Segment: This new segment is designed to record deleted data, enhancing the performance of delete and upsert \noperations.\n\n5. Inverted Index and Fuzzy Matching: These capabilities improve keyword retrieval for scalar ﬁelds\n6. Float16 and BF16 Vector Data Type Support: Milvus now supports these half-precision data types for vector ﬁelds, \nwhich can improve query eﬃciency and reduce memory usage.\n7. L0 Segment: This new segment is designed to record deleted data, enhancing the performance of delete and upsert \noperations.\n\n382024\nIndexes\nMost of the vector index types supported by Milvus use approximate nearest neighbors search ANNS, \n● HNSW: HNSW is a graph-based index and is best suited for scenarios that have a high demand for \nsearch efficiency. There is also a GPU version GPU_CAGRA, thanks to Nvidiaʼs contribution.\n● FLAT: FLAT is best suited for scenarios that seek perfectly accurate and exact search results on a small, \nmillion-scale dataset. There is also a GPU version GPU_BRUTE_FORCE.\n\n222024\nIndexes\nMost of the vector index types supported by Milvus use approximate nearest neighbors search ANNS, \n● HNSW: HNSW is a graph-based index and is best suited for scenarios that have a high demand for \nsearch efficiency. There is also a GPU version GPU_CAGRA, thanks to Nvidiaʼs contribution.\n● FLAT: FLAT is best suited for scenarios that seek perfectly accurate and exact search results on a small, \nmillion-scale dataset. There is also a GPU version GPU_BRUTE_FORCE. \nAnswer:"
+          }
+        },
+        {
+          "timestamp": {
+            "timestamp": 1730451067890,
+            "offsetNanos": 585000
+          },
+          "name": "gen_ai.content.completion",
+          "attributes": {
+            "gen_ai.completion": "Milvus supports HNSW and FLAT indexes for vector fields, with additional GPU versions available for improved performance. The choice between HNSW and FLAT depends on the desired search efficiency and accuracy. Additionally, there are GPU versions of these indexes, but their details aren't mentioned in the provided context."
+          }
+        }
+      ],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451064856,
+        "offsetNanos": 632000
+      },
+      "endTime": {
+        "timestamp": 1730451067895,
+        "offsetNanos": 430000
+      },
+      "durationNanos": 3038798000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "2f86a4e7c2ad8a38",
+      "parentSpanId": "602147bcaaaf3d7b",
+      "spanName": "run_query",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Internal",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "function.kwargs": "{}",
+        "function.args": "('What indexes are available in Milvus?', <langchain_milvus.vectorstores.milvus.Milvus object at 0x1379dc450>)",
+        "gen_ai.environment": "default",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.completion": "Milvus supports HNSW and FLAT indexes for vector fields, with additional GPU versions available for improved performance. The choice between HNSW and FLAT depends on the desired search efficiency and accuracy. Additionally, there are GPU versions of these indexes, but their details aren't mentioned in the provided context."
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit",
+      "events": [],
+      "links": []
+    },
+    {
+      "startTime": {
+        "timestamp": 1730451047284,
+        "offsetNanos": 687000
+      },
+      "endTime": {
+        "timestamp": 1730451067900,
+        "offsetNanos": 376000
+      },
+      "durationNanos": 20615689000,
+      "traceId": "7858ba1d08d71b652da4945866d02c1e",
+      "spanId": "602147bcaaaf3d7b",
+      "spanName": "start",
+      "serviceName": "Rag101",
+      "spanKind": "Client",
+      "spanParentType": "Root",
+      "resourceAttributes": {
+        "k8s.pod.name": "K8S_POD_NAME",
+        "k8s.node.name": "K8S_NODE_NAME",
+        "k8s.namespace.name": "K8S_NAMESPACE",
+        "telemetry.sdk.version": "1.27.0",
+        "k8s.cluster.name": "mycluster",
+        "deployment.environment": "default",
+        "service.name": "Rag101",
+        "k8s.pod.uid": "YOUR_SERVICE_ID",
+        "service.namespace": "K8S_NAMESPACE",
+        "service.instance.id": "YOUR_SERVICE_ID",
+        "telemetry.sdk.language": "python",
+        "telemetry.sdk.name": "openlit"
+      },
+      "spanAttributes": {
+        "function.kwargs": "{}",
+        "function.args": "()",
+        "gen_ai.environment": "default",
+        "gen_ai.application_name": "Rag101",
+        "gen_ai.completion": "Milvus supports HNSW and FLAT indexes for vector fields, with additional GPU versions available for improved performance. The choice between HNSW and FLAT depends on the desired search efficiency and accuracy. Additionally, there are GPU versions of these indexes, but their details aren't mentioned in the provided context."
+      },
+      "statusCode": "Ok",
+      "scopeName": "openlit",
+      "events": [],
+      "links": []
+    }
+  ]
+}

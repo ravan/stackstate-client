@@ -50,13 +50,58 @@ func getClient(t *testing.T, hf http.HandlerFunc) (*Client, *httptest.Server) {
 	return client, server
 }
 
+func TestTraceQuery(t *testing.T) {
+	client, server := getClient(t, func(w http.ResponseWriter, r *http.Request) {
+		assert.Equal(t, "/api/traces/query", r.URL.Path)
+		assert.NotEmpty(t, r.URL.Query().Get("start"))
+		assert.NotEmpty(t, r.URL.Query().Get("end"))
+		assert.NotEmpty(t, r.URL.Query().Get("page"))
+		assert.NotEmpty(t, r.URL.Query().Get("pageSize"))
+		loadRespFile(w, "api/traces/query/response.json")
+	})
+	defer server.Close()
+	req := &TraceQueryRequest{
+		TraceQuery: TraceQuery{
+			SpanFilter: SpanFilter{
+				Attributes: map[string][]string{
+					"service.name": {"PirateJoker"},
+				},
+			},
+			SortBy: []SortBy{
+				{
+					Field:     SpanSortSpanParentType,
+					Direction: SortDirectionAscending,
+				},
+			},
+		},
+		Start:    time.Now().Add(-5 * time.Minute),
+		End:      time.Now(),
+		Page:     0,
+		PageSize: 10,
+	}
+	response, err := client.QueryTraces(req)
+	require.NoError(t, err)
+	assert.Equal(t, 2, len(response.Traces))
+}
+
+func TestGetTrace(t *testing.T) {
+	client, server := getClient(t, func(w http.ResponseWriter, r *http.Request) {
+		assert.Equal(t, "/api/traces/xxx", r.URL.Path)
+		loadRespFile(w, "api/traces/response.json")
+	})
+	defer server.Close()
+	response, err := client.GetTrace("xxx")
+	require.NoError(t, err)
+	assert.Equal(t, 21, len(response.Spans))
+}
+
 func TestQuery(t *testing.T) {
 	client, server := getClient(t, func(w http.ResponseWriter, r *http.Request) {
-		assert.Equal(t, "/api/metric/query", r.URL.Path)
+		assert.Equal(t, "/api/metrics/query", r.URL.Path)
 		assert.NotEmpty(t, r.URL.Query().Get("time"))
 		assert.NotEmpty(t, r.URL.Query().Get("query"))
 		assert.Equal(t, r.URL.Query().Get("timeout"), DefaultTimeout)
-		loadRespFile(w, "api/metric/query/response.json")
+		loadRespFile(w, "api/metrics/query/response.json")
 	})
 	defer server.Close()
 	query := `round(sum by (cluster_name, namespace, pod_name)(container_cpu_usage / 1000000000) / sum by (cluster_name, namespace, pod_name) (kubernetes_cpu_requests), 0.001)`
@@ -68,13 +113,13 @@ func TestQuery(t *testing.T) {
 
 func TestQueryRange(t *testing.T) {
 	client, server := getClient(t, func(w http.ResponseWriter, r *http.Request) {
-		assert.Equal(t, "/api/metric/query_range", r.URL.Path)
+		assert.Equal(t, "/api/metrics/query_range", r.URL.Path)
 		assert.NotEmpty(t, r.URL.Query().Get("start"))
 		assert.NotEmpty(t, r.URL.Query().Get("end"))
 		assert.NotEmpty(t, r.URL.Query().Get("query"))
 		assert.NotEmpty(t, r.URL.Query().Get("step"))
 		assert.Equal(t, r.URL.Query().Get("timeout"), DefaultTimeout)
-		loadRespFile(w, "api/metric/query_range/response.json")
+		loadRespFile(w, "api/metrics/query_range/response.json")
 	})
 	defer server.Close()
 	query := `sum by (cluster_name) (max_over_time(kubernetes_state_node_count{cluster_name="susecon-frb-cluster-0"}[${__interval}]))`

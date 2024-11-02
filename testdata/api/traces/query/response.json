@@ -1,0 +1,15 @@
+{
+  "traces": [
+    {
+      "traceId": "26b80a066c4cfd4b897946132d4305f9",
+      "spanId": "3b04f00958e5c327"
+    },
+    {
+      "traceId": "d4e4feced922ae1b9dcda7c4ce27026d",
+      "spanId": "ff53753cd07f50b2"
+    }
+  ],
+  "pageSize": 2,
+  "page": 0,
+  "matchesTotal": 2
+}

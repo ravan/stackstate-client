@@ -268,3 +268,123 @@ type NodeType struct {
 	IsSettingsNode      bool   `json:"isSettingsNode"`
 	Type                string `json:"_type"`
 }
+
+type TraceQueryRequest struct {
+	TraceQuery TraceQuery `json:"traceQuery"`
+	Start      time.Time  `json:"start"`
+	End        time.Time  `json:"end"`
+	Page       int        `json:"page"`
+	PageSize   int        `json:"pageSize"`
+}
+
+type TraceQuery struct {
+	SpanFilter SpanFilter `json:"spanFilter"`
+	SortBy     []SortBy   `json:"sortBy"`
+}
+
+type Attributes map[string]string
+type FilterAttributes map[string][]string
+
+type SortBy struct {
+	Field     SortField     `json:"field"`     // see sort fields constants
+	Direction SortDirection `json:"direction"` // see sort direction constants
+}
+
+type SpanFilter struct {
+	SpanParentType    []string         `json:"spanParentType"`
+	ServiceName       []string         `json:"serviceName"`
+	SpanName          []string         `json:"spanName"`
+	Attributes        FilterAttributes `json:"attributes"`
+	SpanKind          []SpanKind       `json:"spanKind"` // see span kind constants
+	DurationFromNanos int64            `json:"durationFromNanos"`
+	DurationToNanos   int64            `json:"durationToNanos"`
+	StatusCode        []StatusCode     `json:"statusCode"` // see status code constants
+	TraceId           []string         `json:"traceId"`
+	SpanId            []string         `json:"spanId"`
+	ScopeName         []string         `json:"scopeName"`
+	ScopeVersion      []string         `json:"scopeVersion"`
+}
+
+type SpanKind string
+type StatusCode string
+type SortDirection string
+type SortField string
+
+const (
+	// SpanKind Span Kinds
+	SpanKindClient      SpanKind = "SPAN_KIND_CLIENT"
+	SpanKindServer      SpanKind = "SPAN_KIND_SERVER"
+	SpanKindProducer    SpanKind = "SPAN_KIND_PRODUCER"
+	SpanKindConsumer    SpanKind = "SPAN_KIND_CONSUMER"
+	SpanKindInternal    SpanKind = "SPAN_KIND_INTERNAL"
+	SpanKindUnspecified SpanKind = "SPAN_KIND_UNSPECIFIED"
+
+	// StatusCode Status Codes
+	StatusOk    StatusCode = "ok"
+	StatusError StatusCode = "error"
+	StatusUnset StatusCode = "unset"
+
+	// SortField Sort fields
+	SpanSortStartTime      SortField = "StartTime"
+	SpanSortServiceName    SortField = "ServiceName"
+	SpanSortSpanName       SortField = "SpanName"
+	SpanSortSpanKind       SortField = "SpanKind"
+	SpanSortSpanParentType SortField = "SpanParentType"
+	SpanSortDurationNanos  SortField = "DurationNanos"
+	SpanSortStatusCode     SortField = "StatusCode"
+	SpanSortTraceId        SortField = "TraceId"
+	SpanSortSpanId         SortField = "SpanId"
+	SpanSortScopeName      SortField = "ScopeName"
+	SpanSortScopeVersion   SortField = "ScopeVersion"
+
+	// SortDirection Sort directions
+	SortDirectionAscending  SortDirection = "Ascending"
+	SortDirectionDescending SortDirection = "Descending"
+)
+
+type TraceQueryResponse struct {
+	Traces       []TraceRef `json:"traces"`
+	PageSize     int        `json:"pageSize"`
+	Page         int        `json:"page"`
+	MatchesTotal int        `json:"matchesTotal"`
+}
+
+type TraceRef struct {
+	TraceID string `json:"traceId"`
+	SpanID  string `json:"spanId"`
+}
+
+type Trace struct {
+	TraceID string `json:"traceId"`
+	Spans   []Span `json:"spans"`
+}
+
+type SpanTime struct {
+	Timestamp   int64 `json:"timestamp"`
+	OffsetNanos int   `json:"offsetNanos"`
+}
+
+type Span struct {
+	StartTime          SpanTime    `json:"startTime"`
+	EndTime            SpanTime    `json:"endTime"`
+	DurationNanos      int         `json:"durationNanos"`
+	TraceID            string      `json:"traceId"`
+	SpanID             string      `json:"spanId"`
+	ParentSpanID       string      `json:"parentSpanId"`
+	SpanName           string      `json:"spanName"`
+	ServiceName        string      `json:"serviceName"`
+	SpanKind           string      `json:"spanKind"`
+	SpanParentType     string      `json:"spanParentType"`
+	ResourceAttributes Attributes  `json:"resourceAttributes"`
+	SpanAttributes     Attributes  `json:"spanAttributes"`
+	StatusCode         string      `json:"statusCode"`
+	ScopeName          string      `json:"scopeName"`
+	Events             []SpanEvent `json:"events"`
+	Links              []any       `json:"links"`
+}
+
+type SpanEvent struct {
+	Timestamp  SpanTime   `json:"timestamp"`
+	Name       string     `json:"name"`
+	Attributes Attributes `json:"attributes"`
+}

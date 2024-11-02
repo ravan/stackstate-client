@@ -1,0 +1,18 @@
+{
+  "spanFilter": {
+    "spanParentType": [
+      "External",
+      "Root"
+    ],
+    "attributes": {
+      "service.name": [
+        "PirateJoker"
+      ],
+      "service.namespace": [
+        "K8S_NAMESPACE"
+      ]
+    }
+  },
+  "traceAttributes": {},
+  "sortBy": []
+}

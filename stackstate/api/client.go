@@ -47,18 +47,56 @@ func (c *Client) Status() (*ServerInfo, error) {
 	return &s, nil
 }
 
+func (c *Client) GetTrace(id string) (*Trace, error) {
+	var res Trace
+	err := c.apiRequests(fmt.Sprintf("traces/%s", id)).
+		ToJSON(&res).
+		Fetch(context.TODO())
+	if err != nil {
+		return nil, err
+	}
+	return &res, nil
+}
+
+func (c *Client) GetTraceSpan(traceId string, spanId string) (*Span, error) {
+	var res Span
+	err := c.apiRequests(fmt.Sprintf("traces/%s/spans/%s", traceId, spanId)).
+		ToJSON(&res).
+		Fetch(context.TODO())
+	if err != nil {
+		return nil, err
+	}
+	return &res, nil
+}
+
+func (c *Client) QueryTraces(req *TraceQueryRequest) (*TraceQueryResponse, error) {
+	var res TraceQueryResponse
+	err := c.apiRequests("traces/query").
+		Param("end", strconv.FormatInt(req.End.Unix(), 10)).
+		Param("start", strconv.FormatInt(req.Start.Unix(), 10)).
+		Param("page", strconv.Itoa(req.Page)).
+		Param("pageSize", strconv.Itoa(req.PageSize)).
+		BodyJSON(req.TraceQuery).
+		ToJSON(&res).
+		Fetch(context.TODO())
+	if err != nil {
+		return nil, err
+	}
+	return &res, nil
+}
+
 // QueryMetric is the instant query at a single point in time.
 // The endpoint evaluates an instant query at a single point in time.
 // Query is the promql query and Time the single point.
 // Timeout is in the form "<number><unit (y|w|d|h|m|s|ms)>". Example 10ms.
 func (c *Client) QueryMetric(query string, at time.Time, timeout string) (*MetricQueryResponse, error) {
 	var m MetricQueryResponse
-	err := c.apiRequests("metric/query").
+	err := c.apiRequests("metrics/query").
 		Param("query", query).
 		Param("timeout", timeout).
 		Param("time", strconv.FormatInt(at.Unix(), 10)).
 		ToJSON(&m).
-		Fetch(context.Background())
+		Fetch(context.TODO())
 	if err != nil {
 		return nil, err
 	}
@@ -72,14 +110,14 @@ func (c *Client) QueryMetric(query string, at time.Time, timeout string) (*Metri
 // Timeout is in the form "<number><unit (y|w|d|h|m|s|ms)>". Example 10ms.
 func (c *Client) QueryRangeMetric(query string, start time.Time, end time.Time, step, timeout string) (*MetricQueryResponse, error) {
 	var m MetricQueryResponse
-	err := c.apiRequests("metric/query_range").
+	err := c.apiRequests("metrics/query_range").
 		Param("query", query).
 		Param("timeout", timeout).
 		Param("step", step).
 		Param("start", strconv.FormatInt(start.Unix(), 10)).
 		Param("end", strconv.FormatInt(end.Unix(), 10)).
 		ToJSON(&m).
-		Fetch(context.Background())
+		Fetch(context.TODO())
 	if err != nil {
 		return nil, err
 	}
@@ -92,7 +130,7 @@ func (c *Client) ViewSnapshot(req *ViewSnapshotRequest) (*ViewSnapshotResponse, 
 		Post().
 		BodyJSON(&req).
 		ToJSON(&res).
-		Fetch(context.Background())
+		Fetch(context.TODO())
 	if err != nil {
 		return nil, err
 	}
@@ -176,7 +214,7 @@ func (c *Client) executeTopoScript(req scriptRequest) (*TopoQueryResponse, error
 		BodyJSON(&req).
 		ErrorJSON(&e).
 		ToJSON(&r).
-		Fetch(context.Background())
+		Fetch(context.TODO())
 	if err != nil {
 		if e.Errors != nil {
 			return &TopoQueryResponse{Success: false, Errors: e.Errors, Data: nil}, nil
