@@ -15,8 +15,9 @@ import (
 )
 
 type Client struct {
-	url  string
-	conf *sts.StackState
+	url       string
+	conf      *sts.StackState
+	legacyApi bool
 }
 
 var (
@@ -33,7 +34,7 @@ const (
 
 func NewClient(conf *sts.StackState) *Client {
 	url, _ := strings.CutSuffix(conf.ApiUrl, "/")
-	return &Client{url: url, conf: conf}
+	return &Client{url: url, conf: conf, legacyApi: conf.LegacyApi}
 }
 
 func (c *Client) Status() (*ServerInfo, error) {
@@ -70,10 +71,15 @@ func (c *Client) GetTraceSpan(traceId string, spanId string) (*Span, error) {
 }
 
 func (c *Client) QueryTraces(req *TraceQueryRequest) (*TraceQueryResponse, error) {
+	if c.legacyApi {
+		return c.legacyQuerySpans(req)
+	}
+
 	var res TraceQueryResponse
 	err := c.apiRequests("traces/query").
-		Param("end", strconv.FormatInt(req.End.Unix(), 10)).
-		Param("start", strconv.FormatInt(req.Start.Unix(), 10)).
+		Post().
+		Param("end", toMs(req.End)).
+		Param("start", toMs(req.Start)).
 		Param("page", strconv.Itoa(req.Page)).
 		Param("pageSize", strconv.Itoa(req.PageSize)).
 		BodyJSON(req.TraceQuery).
@@ -85,6 +91,35 @@ func (c *Client) QueryTraces(req *TraceQueryRequest) (*TraceQueryResponse, error
 	return &res, nil
 }
 
+func toMs(t time.Time) string {
+	return strconv.FormatInt(t.UnixMilli(), 10)
+}
+
+func (c *Client) legacyQuerySpans(req *TraceQueryRequest) (*TraceQueryResponse, error) {
+	req.TraceQuery.Filter = req.TraceQuery.SpanFilter
+	req.TraceQuery.SpanFilter = SpanFilter{}
+	var res SpansQueryResponse
+	err := c.apiRequests("traces/spans").
+		Post().
+		Param("end", toMs(req.End)).
+		Param("start", toMs(req.Start)).
+		Param("page", strconv.Itoa(req.Page)).
+		Param("pageSize", strconv.Itoa(req.PageSize)).
+		BodyJSON(req.TraceQuery).
+		ToJSON(&res).
+		Fetch(context.TODO())
+	if err != nil {
+		return nil, err
+	}
+	response := TraceQueryResponse{
+		Traces:       res.Spans,
+		PageSize:     res.PageSize,
+		Page:         res.Page,
+		MatchesTotal: res.MatchesTotal,
+	}
+	return &response, nil
+}
+
 // QueryMetric is the instant query at a single point in time.
 // The endpoint evaluates an instant query at a single point in time.
 // Query is the promql query and Time the single point.
@@ -94,7 +129,7 @@ func (c *Client) QueryMetric(query string, at time.Time, timeout string) (*Metri
 	err := c.apiRequests("metrics/query").
 		Param("query", query).
 		Param("timeout", timeout).
-		Param("time", strconv.FormatInt(at.Unix(), 10)).
+		Param("time", toMs(at)).
 		ToJSON(&m).
 		Fetch(context.TODO())
 	if err != nil {
@@ -114,8 +149,8 @@ func (c *Client) QueryRangeMetric(query string, start time.Time, end time.Time, 
 		Param("query", query).
 		Param("timeout", timeout).
 		Param("step", step).
-		Param("start", strconv.FormatInt(start.Unix(), 10)).
-		Param("end", strconv.FormatInt(end.Unix(), 10)).
+		Param("start", toMs(start)).
+		Param("end", toMs(end)).
 		ToJSON(&m).
 		Fetch(context.TODO())
 	if err != nil {

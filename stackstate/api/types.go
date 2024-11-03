@@ -278,8 +278,10 @@ type TraceQueryRequest struct {
 }
 
 type TraceQuery struct {
-	SpanFilter SpanFilter `json:"spanFilter"`
-	SortBy     []SortBy   `json:"sortBy"`
+	SpanFilter      SpanFilter `json:"spanFilter"`
+	Filter          SpanFilter `json:"filter"` // deprecated. Used with legacy API
+	SortBy          []SortBy   `json:"sortBy"`
+	TraceAttributes Attributes `json:"traceAttributes"`
 }
 
 type Attributes map[string]string
@@ -291,18 +293,18 @@ type SortBy struct {
 }
 
 type SpanFilter struct {
-	SpanParentType    []string         `json:"spanParentType"`
-	ServiceName       []string         `json:"serviceName"`
-	SpanName          []string         `json:"spanName"`
-	Attributes        FilterAttributes `json:"attributes"`
-	SpanKind          []SpanKind       `json:"spanKind"` // see span kind constants
-	DurationFromNanos int64            `json:"durationFromNanos"`
-	DurationToNanos   int64            `json:"durationToNanos"`
-	StatusCode        []StatusCode     `json:"statusCode"` // see status code constants
-	TraceId           []string         `json:"traceId"`
-	SpanId            []string         `json:"spanId"`
-	ScopeName         []string         `json:"scopeName"`
-	ScopeVersion      []string         `json:"scopeVersion"`
+	SpanParentType    []string         `json:"spanParentTyp,omitempty"`
+	ServiceName       []string         `json:"serviceName,omitempty"`
+	SpanName          []string         `json:"spanName,omitempty"`
+	Attributes        FilterAttributes `json:"attributes,omitempty"`
+	SpanKind          []SpanKind       `json:"spanKind,omitempty"` // see span kind constants
+	DurationFromNanos int64            `json:"durationFromNanos,omitempty"`
+	DurationToNanos   int64            `json:"durationToNanos,omitempty"`
+	StatusCode        []StatusCode     `json:"statusCode,omitempty"` // see status code constants
+	TraceId           []string         `json:"traceId,omitempty"`
+	SpanId            []string         `json:"spanId,omitempty"`
+	ScopeName         []string         `json:"scopeName,omitempty"`
+	ScopeVersion      []string         `json:"scopeVersion,omitempty"`
 }
 
 type SpanKind string
@@ -344,6 +346,14 @@ const (
 
 type TraceQueryResponse struct {
 	Traces       []TraceRef `json:"traces"`
+	PageSize     int        `json:"pageSize"`
+	Page         int        `json:"page"`
+	MatchesTotal int        `json:"matchesTotal"`
+}
+
+// Legacy Api for Trace Query
+type SpansQueryResponse struct {
+	Spans        []TraceRef `json:"spans"`
 	PageSize     int        `json:"pageSize"`
 	Page         int        `json:"page"`
 	MatchesTotal int        `json:"matchesTotal"`
