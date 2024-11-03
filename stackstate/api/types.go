@@ -293,7 +293,7 @@ type SortBy struct {
 }
 
 type SpanFilter struct {
-	SpanParentType    []string         `json:"spanParentTyp,omitempty"`
+	SpanParentType    []SpanParentType `json:"spanParentTyp,omitempty"`
 	ServiceName       []string         `json:"serviceName,omitempty"`
 	SpanName          []string         `json:"spanName,omitempty"`
 	Attributes        FilterAttributes `json:"attributes,omitempty"`
@@ -307,12 +307,17 @@ type SpanFilter struct {
 	ScopeVersion      []string         `json:"scopeVersion,omitempty"`
 }
 
+type SpanParentType string
 type SpanKind string
 type StatusCode string
 type SortDirection string
 type SortField string
 
 const (
+	//SpanParentType Span Parent Types
+	SpanParentTypeExternal SpanParentType = "External"
+	SpanParentTypeRoot     SpanParentType = "Root"
+
 	// SpanKind Span Kinds
 	SpanKindClient      SpanKind = "SPAN_KIND_CLIENT"
 	SpanKindServer      SpanKind = "SPAN_KIND_SERVER"

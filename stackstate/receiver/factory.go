@@ -31,6 +31,16 @@ func NewFactory(source, extIdPrefix, cluster string) *Factory {
 	}
 }
 
+func (f *Factory) GetComponentsOfType(ctype string) []*Component {
+	result := make([]*Component, 0)
+	for _, c := range f.components {
+		if c.Type.Name == ctype {
+			result = append(result, c)
+		}
+	}
+	return result
+}
+
 func (f *Factory) GetComponentCount() int {
 	return len(f.components)
 }
