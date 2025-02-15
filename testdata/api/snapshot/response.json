@@ -1,0 +1,291 @@
+{
+  "viewSnapshotResponse": {
+    "components": [
+      {
+        "id": 109260020042662,
+        "name": "k3k-vcluster-server-1",
+        "lastUpdateTimestamp": 1739522919453,
+        "type": 58525993801784,
+        "layer": 0,
+        "domain": 0,
+        "environments": [
+          124769580969917
+        ],
+        "state": {
+          "id": 119423452812026,
+          "lastUpdateTimestamp": 1739522829288,
+          "healthState": "CLEAR",
+          "_type": "StackElementState"
+        },
+        "outgoingRelations": [
+          203285289009057,
+          149433412032202,
+          27123551007602,
+          263761484513131,
+          257633348930279,
+          258060797949683,
+          217365095664464,
+          5363032183822,
+          232214170543695,
+          168191014901821,
+          51653317912593
+        ],
+        "incomingRelations": [
+          55483531897578,
+          145024053993504,
+          44152764432674
+        ],
+        "synchronized": true,
+        "failingChecks": [],
+        "retrievalSource": "QUERY",
+        "identifiers": [
+          "urn:kubernetes:/inception:virtual-cluster:pod/k3k-vcluster-server-1",
+          "urn:kubernetes:/inception/pod/b5117408-4c0c-4698-9fe5-36140eecfee8"
+        ],
+        "tags": [
+          "cluster-type:kubernetes",
+          "cluster:vcluster",
+          "statefulset:k3k-vcluster-server",
+          "controller-revision-hash:k3k-vcluster-server-764db7cbbb",
+          "namespace:virtual-cluster",
+          "apps.kubernetes.io/pod-index:1",
+          "service-account:default",
+          "node-name:lima-inception",
+          "stackpack:kubernetes",
+          "cluster-name:inception",
+          "statefulset.kubernetes.io/pod-name:k3k-vcluster-server-1",
+          "role:server",
+          "component-type:kubernetes-pod"
+        ],
+        "properties": {
+          "clusterNameIdentifier": "urn:cluster:/kubernetes:inception",
+          "readyContainers": "1",
+          "nodeName": "lima-inception",
+          "namespaceIdentifier": "urn:kubernetes:/inception:namespace/virtual-cluster",
+          "totalContainers": "1",
+          "ownerName": "k3k-vcluster-server (statefulset)",
+          "restarts": "0",
+          "nodeIdentifier": "urn:kubernetes:/inception:node/lima-inception",
+          "readyContainersStatus": "CLEAR",
+          "creationTimestamp": "2025-02-14T08:46:27Z",
+          "podPhase": "Running",
+          "ownerIdentifier": "urn:kubernetes:/inception:virtual-cluster:statefulset/k3k-vcluster-server",
+          "podIP": "10.42.0.37"
+        },
+        "_type": "ViewComponent"
+      },
+      {
+        "id": 244453529763695,
+        "name": "k3k-vcluster-server-0",
+        "lastUpdateTimestamp": 1739532905884,
+        "type": 58525993801784,
+        "layer": 0,
+        "domain": 0,
+        "environments": [
+          124769580969917
+        ],
+        "state": {
+          "id": 155942635837393,
+          "lastUpdateTimestamp": 1739522739556,
+          "healthState": "CLEAR",
+          "_type": "StackElementState"
+        },
+        "outgoingRelations": [
+          235834584327456,
+          22432072807220,
+          588084343853,
+          130725574487839,
+          164139918857604,
+          23089766926922,
+          50291349840042,
+          243247074400584,
+          142949315334596,
+          28018388954082,
+          231770819062677
+        ],
+        "incomingRelations": [
+          55420639113078,
+          193878516436548,
+          251982713280701
+        ],
+        "synchronized": true,
+        "failingChecks": [],
+        "retrievalSource": "QUERY",
+        "identifiers": [
+          "urn:kubernetes:/inception/pod/e258d22e-f41b-4cfc-a6e3-50d198c27628",
+          "urn:kubernetes:/inception:virtual-cluster:pod/k3k-vcluster-server-0"
+        ],
+        "tags": [
+          "statefulset.kubernetes.io/pod-name:k3k-vcluster-server-0",
+          "cluster-name:inception",
+          "cluster-type:kubernetes",
+          "cluster:vcluster",
+          "statefulset:k3k-vcluster-server",
+          "controller-revision-hash:k3k-vcluster-server-764db7cbbb",
+          "apps.kubernetes.io/pod-index:0",
+          "namespace:virtual-cluster",
+          "service-account:default",
+          "node-name:lima-inception",
+          "stackpack:kubernetes",
+          "role:server",
+          "component-type:kubernetes-pod"
+        ],
+        "properties": {
+          "clusterNameIdentifier": "urn:cluster:/kubernetes:inception",
+          "readyContainers": "1",
+          "nodeName": "lima-inception",
+          "namespaceIdentifier": "urn:kubernetes:/inception:namespace/virtual-cluster",
+          "totalContainers": "1",
+          "ownerName": "k3k-vcluster-server (statefulset)",
+          "restarts": "1",
+          "nodeIdentifier": "urn:kubernetes:/inception:node/lima-inception",
+          "readyContainersStatus": "CLEAR",
+          "creationTimestamp": "2025-02-14T08:45:27Z",
+          "podPhase": "Running",
+          "ownerIdentifier": "urn:kubernetes:/inception:virtual-cluster:statefulset/k3k-vcluster-server",
+          "podIP": "10.42.0.36"
+        },
+        "_type": "ViewComponent"
+      },
+      {
+        "id": 15049586740508,
+        "name": "k3k-vcluster-server-2",
+        "lastUpdateTimestamp": 1739523009159,
+        "type": 58525993801784,
+        "layer": 0,
+        "domain": 0,
+        "environments": [
+          124769580969917
+        ],
+        "state": {
+          "id": 102280744582869,
+          "lastUpdateTimestamp": 1739522919700,
+          "healthState": "CLEAR",
+          "_type": "StackElementState"
+        },
+        "outgoingRelations": [
+          167220144131045,
+          187842287409622,
+          254372480996311,
+          25171526672043,
+          156800869241538,
+          227390756485824,
+          54045145946454,
+          9390954370749,
+          241268243836793,
+          175158705705004,
+          145269526411044
+        ],
+        "incomingRelations": [
+          40829066678925,
+          242309075783940,
+          66095533780
+        ],
+        "synchronized": true,
+        "failingChecks": [],
+        "retrievalSource": "QUERY",
+        "identifiers": [
+          "urn:kubernetes:/inception/pod/aacdf528-34c9-4f3c-9724-028b85c86ffc",
+          "urn:kubernetes:/inception:virtual-cluster:pod/k3k-vcluster-server-2"
+        ],
+        "tags": [
+          "cluster-name:inception",
+          "cluster-type:kubernetes",
+          "cluster:vcluster",
+          "statefulset:k3k-vcluster-server",
+          "controller-revision-hash:k3k-vcluster-server-764db7cbbb",
+          "namespace:virtual-cluster",
+          "apps.kubernetes.io/pod-index:2",
+          "statefulset.kubernetes.io/pod-name:k3k-vcluster-server-2",
+          "service-account:default",
+          "node-name:lima-inception",
+          "stackpack:kubernetes",
+          "role:server",
+          "component-type:kubernetes-pod"
+        ],
+        "properties": {
+          "clusterNameIdentifier": "urn:cluster:/kubernetes:inception",
+          "readyContainers": "1",
+          "nodeName": "lima-inception",
+          "namespaceIdentifier": "urn:kubernetes:/inception:namespace/virtual-cluster",
+          "totalContainers": "1",
+          "ownerName": "k3k-vcluster-server (statefulset)",
+          "restarts": "0",
+          "nodeIdentifier": "urn:kubernetes:/inception:node/lima-inception",
+          "readyContainersStatus": "CLEAR",
+          "creationTimestamp": "2025-02-14T08:47:38Z",
+          "podPhase": "Running",
+          "ownerIdentifier": "urn:kubernetes:/inception:virtual-cluster:statefulset/k3k-vcluster-server",
+          "podIP": "10.42.0.38"
+        },
+        "_type": "ViewComponent"
+      }
+    ],
+    "relations": [],
+    "indirectRelations": [],
+    "groups": [],
+    "groupRelations": [],
+    "metadata": {
+      "layers": [
+        {
+          "id": 218284772638170,
+          "lastUpdateTimestamp": 1736515022721,
+          "name": "Containers",
+          "order": 9000.0,
+          "_type": "Layer"
+        },
+        {
+          "id": -1,
+          "name": "Incoming",
+          "order": -1.7976931348623157E+308,
+          "_type": "Layer"
+        },
+        {
+          "id": 0,
+          "name": "Selection",
+          "order": 0.0,
+          "_type": "Layer"
+        },
+        {
+          "id": -2,
+          "name": "Outgoing",
+          "order": 1.7976931348623157E+308,
+          "_type": "Layer"
+        }
+      ],
+      "domains": [
+        {
+          "id": 77237266941198,
+          "lastUpdateTimestamp": 1739439812462,
+          "name": "inception",
+          "order": 940.0,
+          "_type": "Domain"
+        },
+        {
+          "id": 0,
+          "name": "",
+          "order": 0.0,
+          "_type": "Domain"
+        }
+      ],
+      "environments": [
+        {
+          "id": 124769580969917,
+          "lastUpdateTimestamp": 1736515022721,
+          "name": "Production",
+          "_type": "Environment"
+        }
+      ],
+      "groupedByLayers": false,
+      "groupedByDomains": false,
+      "_type": "ViewSnapshotMetadata"
+    },
+    "traversalResult": {
+      "allHiddenPathsTraversed": true,
+      "allConnectedComponentsFound": true,
+      "_type": "ViewTraversalResult"
+    },
+    "_type": "ViewSnapshot"
+  },
+  "_type": "QuerySnapshotResult"
+}

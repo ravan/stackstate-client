@@ -4,6 +4,7 @@ import (
 	"context"
 	"crypto/tls"
 	"encoding/json"
+	"errors"
 	"fmt"
 	rq "github.com/carlmjohnson/requests"
 	sts "github.com/ravan/stackstate-client/stackstate"
@@ -159,17 +160,35 @@ func (c *Client) QueryRangeMetric(query string, start time.Time, end time.Time, 
 	return &m, nil
 }
 
-func (c *Client) ViewSnapshot(req *ViewSnapshotRequest) (*ViewSnapshotResponse, error) {
-	var res ViewSnapshotResponse
-	err := c.apiRequests("snapshot").
-		Post().
-		BodyJSON(&req).
-		ToJSON(&res).
-		Fetch(context.TODO())
+func (c *Client) SnapShotTopologyQuery(query string) ([]ViewComponent, error) {
+	req := NewViewSnapshotRequest(query)
+	res, err := c.ViewSnapshot(req)
 	if err != nil {
 		return nil, err
 	}
-	return &res, nil
+	if !res.Success {
+		return nil, errors.New(res.Errors[0].Message)
+	}
+	return res.Components, nil
+}
+
+func (c *Client) ViewSnapshot(req *ViewSnapshotRequest) (*ViewSnapshotResponse, error) {
+	var res querySnapshotResult
+	var e ErrorResp
+	err := c.apiRequests("snapshot").
+		Post().
+		BodyJSON(&req).
+		ErrorJSON(&e).
+		ToJSON(&res).
+		Fetch(context.TODO())
+	if err != nil {
+		if e.Errors != nil && len(e.Errors) > 0 {
+			return &ViewSnapshotResponse{Success: false, Errors: e.Errors}, nil
+		}
+		return nil, err
+	}
+	res.ViewSnapshotResponse.Success = true
+	return &res.ViewSnapshotResponse, nil
 }
 
 func (c *Client) Layers() (*map[int64]NodeType, error) {

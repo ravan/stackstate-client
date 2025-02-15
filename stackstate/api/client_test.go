@@ -95,6 +95,25 @@ func TestGetTrace(t *testing.T) {
 	assert.Equal(t, 21, len(response.Spans))
 }
 
+func TestViewSnapshot(t *testing.T) {
+	query := "type = 'pod' and label = 'namespace:virtual-cluster'"
+	client, server := getClient(t, func(w http.ResponseWriter, r *http.Request) {
+		assert.Equal(t, "/api/snapshot", r.URL.Path)
+		queryReq := ViewSnapshotRequest{}
+		err := json.NewDecoder(r.Body).Decode(&queryReq)
+		require.NoError(t, err)
+		assert.Equal(t, query, queryReq.Query)
+		loadRespFile(w, "api/snapshot/response.json")
+	})
+	defer server.Close()
+	// Comment out mock above and uncomment below to test on a live server and debug requests.
+	//DumpHttpRequest = true
+	//client := NewClient(getConfig(t))
+	response, err := client.SnapShotTopologyQuery(query)
+	require.NoError(t, err)
+	assert.Equal(t, 3, len(response))
+}
+
 func TestQuery(t *testing.T) {
 	client, server := getClient(t, func(w http.ResponseWriter, r *http.Request) {
 		assert.Equal(t, "/api/metrics/query", r.URL.Path)

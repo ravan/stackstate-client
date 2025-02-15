@@ -190,8 +190,14 @@ type scriptRequest struct {
 	Body    string `json:"body"`
 }
 
+type querySnapshotResult struct {
+	ViewSnapshotResponse ViewSnapshotResponse `json:"viewSnapshotResponse"`
+}
+
 type ViewSnapshotResponse struct {
+	Success    bool `json:"success"`
 	Components []ViewComponent
+	Errors     []*ErrorMsg `json:"errors"`
 }
 
 type ViewComponent struct {
@@ -230,6 +236,7 @@ type ViewSnapshotRequest struct {
 
 type ViewSnapshotMetadata struct {
 	Type                  string `json:"_type"`
+	ShowFullComponent     bool   `json:"showFullComponent"`
 	GroupingEnabled       bool   `json:"groupingEnabled"`
 	ShowIndirectRelations bool   `json:"showIndirectRelations"`
 	MinGroupSize          int    `json:"minGroupSize"`
@@ -240,18 +247,18 @@ type ViewSnapshotMetadata struct {
 	AutoGrouping          bool   `json:"autoGrouping"`
 	ConnectedComponents   bool   `json:"connectedComponents"`
 	NeighboringComponents bool   `json:"neighboringComponents"`
-	QueryTime             int64  `json:"queryTime"`
+	QueryTime             int64  `json:"queryTime,omitempty"`
 }
 
-func newViewSnapshotRequest() *ViewSnapshotRequest {
+func NewViewSnapshotRequest(query string) *ViewSnapshotRequest {
 	return &ViewSnapshotRequest{
 		Type: "ViewSnapshotRequest",
 		Metadata: ViewSnapshotMetadata{
 			Type:         "QueryMetadata",
 			MinGroupSize: 2,
 			ShowCause:    "NONE",
-			QueryTime:    time.Now().Unix(),
 		},
+		Query:        query,
 		QueryVersion: "0.0.1",
 	}
 }
